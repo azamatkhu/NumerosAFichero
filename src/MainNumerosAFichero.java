@@ -11,22 +11,7 @@ public class MainNumerosAFichero {
         System.out.println("Escribe el numero: ");
         int numero = sc.nextInt();
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) {
-            System.out.println("Guardando...");
-
-            String linea = "";
-
-            for (int i = 1; i <= numero; i++) {
-                linea += i;
-                linea += " ";
-                writer.write(linea);
-                writer.newLine();
-            }
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        System.out.println("El archivo se ha creado!");
+        List<Integer> numeros = GeneradorNumeros.generarNumeros(numero);
+        CreadorFichero.crearFichero(nombreArchivo, numeros);
     }
 }
