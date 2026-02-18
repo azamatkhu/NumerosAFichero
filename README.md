@@ -12,9 +12,12 @@ misma línea, sin separadores adicionales excepto un espacio entre números.**
 **Ejemplo:
 Si se introduce el número 3**
 
-**El contenido del fichero será:
+**El contenido del fichero será:**
+
 **1**
+
 **1 2**
+
 **1 2 3**
 
 Primero, he creado la claseCreadorFichero, que sirve para crear el fichero. En ello aplico la logica de creacion de lineas con los numeros.
